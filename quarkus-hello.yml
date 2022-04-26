@@ -1,0 +1,10 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://10.95.24.41
+functions:
+  quarkus-hello:
+    lang: quarkus-native-distroless
+    handler: ./quarkus-hello
+    image: 10.95.28.159:8083/openfaas/funcs/quarkus-hello:latest
+

@@ -1,0 +1,36 @@
+<settings>
+
+    <mirrors>
+        <mirror>
+        <id>central</id>
+        <name>central</name>
+        <url>http://10.95.28.53/nexus/repository/maven-public/</url>
+        <mirrorOf>*</mirrorOf>
+        </mirror>
+    </mirrors>
+
+    <profiles>
+        <profile>
+        <id>nexus</id>
+        <repositories>
+            <repository>
+                <id>central</id>
+                <url>http://central</url>
+                <snapshots>
+                    <enabled>true</enabled>
+                </snapshots>
+                <releases>
+                    <enabled>true</enabled>
+                </releases>
+            </repository>
+        </repositories>
+        </profile>
+    </profiles>
+
+    <activeProfiles>
+        <activeProfile>nexus</activeProfile>
+    </activeProfiles>
+
+    <localRepository>/opt/jenkins/remoting/.m2/repository</localRepository>
+
+</settings>
